@@ -2,3 +2,11 @@
   margin: 50px auto;
   width: clamp(300px, 70%, 750px);
 }
+
+.search-bar-description {
+  font-size: 12px;
+}
+
+.search-bar-description-parts {
+  color: var(--grey-color);
+}

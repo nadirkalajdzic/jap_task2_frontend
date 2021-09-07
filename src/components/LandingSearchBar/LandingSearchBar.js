@@ -10,6 +10,8 @@ import Autocomplete from "@material-ui/lab/Autocomplete";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import SearchIcon from "@material-ui/icons/Search";
 
+import { Typography } from "antd";
+
 import {
   getFilteredShows,
   getTop10Movies,
@@ -17,6 +19,8 @@ import {
 } from "../../api/videosApi";
 
 import "./LandingSearchBar.css";
+
+const { Paragraph } = Typography;
 
 export default function LandingSearchBar({ toggle }) {
   const [options, setOptions] = useState([]);
@@ -81,12 +85,15 @@ export default function LandingSearchBar({ toggle }) {
         />
       )}
       renderOption={(option, { inputValue }) => {
-        const matches = match(option.title, inputValue);
-        const parts = parse(option.title, matches);
+        const titleMatches = match(option.title, inputValue);
+        const titleParts = parse(option.title, titleMatches);
+
+        const descriptionMatches = match(option.description, inputValue);
+        const descriptionParts = parse(option.description, descriptionMatches);
 
         return (
           <div>
-            {parts.map((part, index) => (
+            {titleParts.map((part, index) => (
               <span
                 key={index}
                 style={{ fontWeight: part.highlight ? 700 : 400 }}
@@ -94,6 +101,20 @@ export default function LandingSearchBar({ toggle }) {
                 {part.text}
               </span>
             ))}
+            <Paragraph
+              ellipsis={{ rows: 2, expandable: false }}
+              className="search-bar-description"
+            >
+              {descriptionParts.map((part, index) => (
+                <span
+                  key={index}
+                  style={{ fontWeight: part.highlight ? 700 : 400 }}
+                  className="search-bar-description-parts"
+                >
+                  {part.text}
+                </span>
+              ))}
+            </Paragraph>
           </div>
         );
       }}
