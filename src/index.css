@@ -1,0 +1,49 @@
+/* font of the logo */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+
+/* general font */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+html {
+  font-family: "Open Sans", sans-serif;
+  color: var(--black-color);
+}
+
+:root {
+  --custom-logo-font: Orbitron;
+  --grey-color: #798da3;
+  --black-color: #3b4754;
+  --button-color: #29323d;
+  --valid-green-color: #00800042;
+  --invalid-red-color: #ff000024;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.MuiAutocomplete-popupIndicatorOpen {
+  transform: none !important;
+}
+
+.rotate {
+  animation: rotation 2s infinite linear;
+}
+
+.hidden {
+  display: none;
+}
+
+.inline {
+  display: flex;
+  gap: 10px;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

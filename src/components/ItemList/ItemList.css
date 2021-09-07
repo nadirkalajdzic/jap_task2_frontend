@@ -1,0 +1,27 @@
+@media screen and (min-width: 650px) {
+  .pair-item {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    justify-content: center;
+    column-gap: 10%;
+    margin-block: 10%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .pair-item {
+    grid-template-rows: repeat(2, 600px);
+    padding-top: 50px;
+    row-gap: 50px;
+  }
+}
+
+.pair-item {
+  display: grid;
+  justify-content: center;
+}
+
+.item-list-show-more {
+  text-align: center;
+  padding-bottom: 50px;
+}

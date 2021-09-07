@@ -1,0 +1,25 @@
+.page-footer {
+  background-color: #edf0f4;
+  color: var(--grey-color);
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.page-footer-sites {
+  margin-top: 25px;
+}
+
+.page-footer-sites > div {
+  margin-top: 10px;
+}
+
+.page-footer-icons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.page-footer-icons > div {
+  padding: 5px;
+}

@@ -1,0 +1,66 @@
+.auth-page {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.auth-page-breadcrumbs {
+  margin-left: 5%;
+}
+
+.link-breadcrumb {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+.link-breadcrumb:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.auth-page-header {
+  color: var(--black-color);
+  font-size: 3rem;
+  margin-top: 50px;
+}
+
+.auth-page-current {
+  color: var(--grey-color);
+}
+
+.auth-page-form {
+  margin-top: 100px;
+}
+
+.auth-form-input {
+  padding: 4px 7px;
+  min-width: 300px;
+  width: 35%;
+}
+
+.auth-page-single-input-label {
+  margin-top: 25px;
+  color: var(--black-color);
+  font-weight: 500;
+}
+
+.auth-page-single-input-input {
+  margin-top: 10px;
+  color: var(--black-color);
+}
+
+.auth-page-button {
+  margin: 50px auto;
+  padding-bottom: 100px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+}
+
+.auth-page-button > .MuiButton-root {
+  min-width: 300px;
+  width: 35%;
+}
+
+.auth-page-link-to {
+  margin-top: 10px;
+}

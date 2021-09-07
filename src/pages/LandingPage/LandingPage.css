@@ -1,0 +1,31 @@
+.landing-page-header {
+  margin-inline: 20%;
+}
+
+.landing-page-big-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.landing-page-title-description {
+  margin-top: 20px;
+  text-align: center;
+  color: var(--grey-color);
+}
+
+.landing-page-toggle-buttons {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.landing-page-toggle-buttons > .landing-page-toggle-group > .Mui-selected {
+  background-color: var(--button-color);
+  color: white;
+}
+
+.landing-page-toggle-buttons
+  > .landing-page-toggle-group
+  > .Mui-selected:hover {
+  background-color: black;
+}
