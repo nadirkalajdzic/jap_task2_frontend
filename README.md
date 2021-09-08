@@ -1,7 +1,7 @@
 ## Instruction to set up the project
 
 # Firstly, you will find here the instructions how to set up both backend and frontend for this app 
-# The backend is on the following link: https://github.com/nadirkalajdzic/jap_task1_backend
+# The backend is on the following link: https://github.com/nadirkalajdzic/jap_task2_backend
 
 When you clone this "frontend repository" you need to do the following:
    1. add a .env file in the root folder and add the following enviroment variable: REACT_APP_API_URL=https://localhost:5001,
