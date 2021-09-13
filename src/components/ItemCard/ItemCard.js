@@ -27,11 +27,6 @@ function ItemCard({ item }) {
   const history = useHistory();
   const classes = useStyles();
 
-  var rating = item.ratings.reduce((a, b) => a + b.value, 0);
-  item.ratings.length !== 0
-    ? (rating = rating / item.ratings.length)
-    : (rating = undefined);
-
   const goToMovie = () => history.push(`/item/${item.id}`);
 
   const addRatingForUser = (e, newVal) => {
@@ -76,7 +71,7 @@ function ItemCard({ item }) {
               <StyledRating
                 name={`rating-${item.id}`}
                 style={{ marginBottom: 10 }}
-                value={rating}
+                value={item.averageRating}
                 precision={0.1}
                 onChangeActive={(e, val) => setHoveredRating(val)}
                 onChange={addRatingForUser}

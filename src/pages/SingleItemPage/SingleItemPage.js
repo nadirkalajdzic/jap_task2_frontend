@@ -51,11 +51,6 @@ function SingleItemPage() {
       </Page>
     );
 
-  var rating = item.ratings.reduce((a, b) => a + b.value, 0);
-  item.ratings.length !== 0
-    ? (rating = rating / item.ratings.length)
-    : (rating = undefined);
-
   return (
     <Page>
       <div className="single-item-page">
@@ -77,22 +72,16 @@ function SingleItemPage() {
           </div>
           <div className="single-item-page-title">{item.title}</div>
           <div className="single-item-page-rating">
-            {rating !== undefined ? (
-              <p>Rating: {rating.toFixed(2)}</p>
-            ) : (
-              <p>Not rated yet</p>
-            )}
-            {rating !== undefined && (
-              <div>
-                <StyledRating
-                  name="read-only"
-                  style={{ marginBottom: 10, height: 30 }}
-                  value={rating}
-                  precision={0.1}
-                  readOnly
-                />
-              </div>
-            )}
+            <p>Rating: {item.averageRating.toFixed(2)}</p>
+            <div>
+              <StyledRating
+                name="read-only"
+                style={{ marginBottom: 10, height: 30 }}
+                value={item.averageRating}
+                precision={0.1}
+                readOnly
+              />
+            </div>
           </div>
           <div className="font-styling">
             Release date: {new Date(item.releaseDate).toDateString()}
