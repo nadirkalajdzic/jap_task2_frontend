@@ -12,28 +12,13 @@ function ItemList({ itemList }) {
 
   const showMore = () => setMore((prevState) => prevState + 10);
 
-  // pairing logic for cards with show more
-  const rows = itemList.slice(0, more).reduce(function (rows, key, index) {
-    return (
-      (index % 2 === 0 ? rows.push([key]) : rows[rows.length - 1].push(key)) &&
-      rows
-    );
-  }, []);
-
   return (
     <div className="item-list">
-      <div className="item-pair-list">
-        {rows.map((x, index) => {
+      <div className="item-item-list">
+        {itemList.slice(0, more).map((x, index) => {
           return (
-            <div className="pair-item" key={`pair-item-${index}`}>
-              <div>
-                <ItemCard item={x[0]} />
-              </div>
-              {x[1] != null && (
-                <div>
-                  <ItemCard item={x[1]} />
-                </div>
-              )}
+            <div className="single-item" key={index}>
+              <ItemCard item={x} />
             </div>
           );
         })}
